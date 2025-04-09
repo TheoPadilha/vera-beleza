@@ -1,7 +1,7 @@
 .navbar {
-    background-color: #fff;
+  font-family: 'poppins', serif;
+    background-color: #f6d9d6;
     padding: 20px 40px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     position: fixed;
     width: 100%;
     top: 0;
@@ -12,25 +12,28 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
+    max-width: 1900px;
+    
   }
   
   .logo {
-    font-family: 'Georgia', serif;
-    font-size: 1.8rem;
+    margin-left: 50px;
+    font-family: 'poppins', serif;
+    font-size: 30px;
     color: #d6246b;
   }
   
   .nav-links {
+    margin-right: 200px;
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 130px;
   }
   
   .nav-links li a {
+    font-size: 23px;
     text-decoration: none;
-    color: #333;
+    color: #4a2c2a;
     font-weight: 500;
     transition: color 0.3s ease;
   }
