@@ -1,0 +1,29 @@
+.sobre {
+  padding: 80px 20px;
+  background-color: #fceeee; /* tom de rosa claro igual ao usado no gradiente da hero */
+  color: #5c4b4b; /* tom marrom rosado suave */
+  text-align: center;
+}
+
+.sobre .container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.sobre h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: #8b5e5e; /* substituindo o roxo forte pelo tom já usado nos títulos */
+  font-weight: 600;
+}
+
+.sobre p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #6e5b5b; /* cor suave igual aos parágrafos do site */
+}

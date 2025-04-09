@@ -1,0 +1,48 @@
+.contato {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #fff0f6, #fff8fb);
+  text-align: center;
+  color: #5e355c;
+}
+
+.contato .container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
+  padding: 50px 30px;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.contato h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: #6a1b9a;
+  font-weight: 600;
+}
+
+.contato p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #4a148c;
+}
+
+.botao-contato {
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: #ec407a;
+  color: #fff;
+  border: none;
+  border-radius: 32px;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 14px rgba(236, 64, 122, 0.3);
+}
+
+.botao-contato:hover {
+  background-color: #d81b60;
+  transform: translateY(-2px);
+}
