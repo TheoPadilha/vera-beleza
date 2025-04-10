@@ -3,6 +3,7 @@
   background-color: #fceeee; /* tom de rosa claro igual ao usado no gradiente da hero */
   color: #5c4b4b; /* tom marrom rosado suave */
   text-align: center;
+  z-index: 100;
 }
 
 .sobre .container {
