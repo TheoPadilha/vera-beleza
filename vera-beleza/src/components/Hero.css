@@ -7,15 +7,15 @@
 .img-mulheres {
   width: 1300px;
   position: relative;
-  right: -400px;
-  top: 54px;
+  top: -32px;
+  right: -300px;
   z-index: 0;
 }
 
 .hero-container {
   background-color: #ffe0d3;
   font-family: sans-serif;
-  min-height: 100vh;
+  max-height: 100vh;
   position: relative; /* <- importante */
   overflow: hidden; /* <- corta o que passar */
 }
@@ -29,6 +29,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  top: 10px;
 }
 
 .hero-text {
