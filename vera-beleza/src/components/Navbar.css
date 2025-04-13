@@ -1,11 +1,8 @@
-.nav_rei {
-  position: fixed;
-  width: 100%;
-}
-
 .navbar {
   font-family: "poppins", serif;
+ 
   padding: 20px 40px;
+  position: fixed;
   width: 100%;
   top: 0;
   z-index: 999;
@@ -19,6 +16,8 @@
   max-width: 1900px;
 }
 
+
+
 .logo {
   margin-left: 50px;
   font-family: "poppins", serif;
@@ -27,10 +26,10 @@
 }
 
 .nav-links {
+  margin-right: 200px;
   list-style: none;
   display: flex;
   gap: 130px;
-  z-index: 999;
 }
 
 .nav-links li a {
@@ -38,8 +37,7 @@
   text-decoration: none;
   color: #4a2c2a;
   font-weight: 500;
-  transition: color 0.1s ease;
-  z-index: 999;
+  transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
@@ -55,9 +53,7 @@
   left: -500px;
   width: 1290px;
   height: 200px;
+  opacity: 0.8;
   z-index: -1;
   transform: rotate(-160deg);
-}
-.navLink_colorido {
-  z-index: 999;
 }
