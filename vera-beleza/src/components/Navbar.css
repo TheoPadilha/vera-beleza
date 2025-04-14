@@ -17,10 +17,10 @@
 }
 
 .logo {
-  margin-left: 50px;
-  font-family: "poppins", serif;
-  font-size: 30px;
-  color: #d6246b;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 34px;
+  color: #9b493b;
+  font-weight: 600;
 }
 
 .nav-links {
