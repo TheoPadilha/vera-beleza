@@ -1,7 +1,7 @@
 import "./hero.css";
 import "./Navbar.css";
 import manicureImg from "../assets/upscalemedia-transformed (2) (1).png";
-import { Blob, Blob2 } from "./Blob.jsx";
+import { Blob, Blob2 ,Blob3} from "./Blob.jsx";
 const Home = () => {
   return (
     <div className="hero-container">
@@ -43,6 +43,8 @@ const Home = () => {
       <main className="hero-main">
         <Blob2 />
         <Blob />
+        <Blob3 />
+
 
         <div className="img-mulheres">
           <img src={manicureImg} alt="" />
