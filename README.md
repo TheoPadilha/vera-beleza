@@ -44,7 +44,7 @@ A página se adapta perfeitamente a celulares, tablets e computadores, oferecend
 
 4. Inicie o projeto:
    ```bash
-   npm start
+   npm run dev
    ```
 
 ## 📌 Status
