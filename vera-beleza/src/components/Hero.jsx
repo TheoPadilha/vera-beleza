@@ -1,7 +1,10 @@
 import "./hero.css";
 import "./Navbar.css";
 import manicureImg from "../assets/upscalemedia-transformed (2) (1).png";
+import manicurepng from "../assets/manicure.png"
 import { Blob, Blob2 ,Blob3} from "./Blob.jsx";
+// import { IconName } from "react-icons/fa";
+
 const Home = () => {
   return (
     <div className="hero-container">
@@ -55,10 +58,18 @@ const Home = () => {
             por inteiro
           </h1>
           <h2>Beleza que começa no cuidado com você</h2>
-          <p>
-            Manicure, Pedicure, Depilação, Terapias, <br />
-            Massagens, Reiki, Reflexologia e muito mais.
-          </p>
+          <div className="Hero-servicos">
+            <ul>
+              <li><img className="icone-esmalte" src={manicurepng} alt="" /> Manicure</li>
+              <li>Pedicure</li>
+              <li>Depilação</li>
+            </ul>
+            <ul>
+            <li>Terapias</li>
+              <li>Massagens</li>
+              <li id="reiki">Reiki ,Reflexologia <br />e muito mais </li>
+            </ul>
+          </div>
           <div className="botaoAgendarHrr">
             <a
               className="agendehorario"
