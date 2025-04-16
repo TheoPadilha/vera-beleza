@@ -17,10 +17,21 @@
 .img-mulheres {
   position: absolute;
   bottom: 77px; /* ou top: 0; depende de onde você quer ela */
-  right: 350px; /* ou left: 0 */
+  right: 250px; /* ou left: 0 */
   width: 600px; /* exemplo */
   z-index: 2;
 }
+/* .img-quadro {
+  position: absolute;
+  bottom: 620px;
+  right: 580px; 
+} */
+
+.img-quadro{
+  margin-bottom: 500px;
+  margin-left: -1000px;
+}
+
 
 .hero-container {
   background-color: #ffe0d3;
@@ -62,17 +73,19 @@
   color: #2a2a2a;
   margin-bottom: 30px;
 }
-.Hero-servicos{
-display: flex;
-gap: 150px;
-margin-bottom: 30px;
+.Hero-servicos {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-bottom: 30px;
 }
 
-.Hero-servicos ul{
+.Hero-servicos ul {
+  display: flex;
   list-style: none;
 }
 
-.Hero-servicos ul li{
+.Hero-servicos ul li {
   color: #2a2a2a;
   display: flex;
   font-family: "Poppins", sans-serif;
@@ -81,27 +94,35 @@ margin-bottom: 30px;
   align-items: center;
 }
 
-.icone-esmalte{
+.icon-trabalhos {
   width: 35px;
-  margin-right: 10px
+  margin-right: 10px;
+}
+.icon-trabalhos2 {
+  width: 50px;
+  margin-right: 10px;
 }
 
-#reiki{
+.linha1 {
+  display: flex;
+  gap: 18px;
+}
+
+#reiki {
   font-size: 23px;
 }
 
 .botaoAgendarHrr {
   all: unset; /* Pode manter, ou remover se quiser centralizar/mover */
- 
 }
 
 .agendehorario {
-  display: inline-block;
-  padding: 12px 24px;
+  display: flex;
+  padding: 12px 16px;
   background-color: #4a2c2a;
   color: #faf0d7;
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 23px;
   border-radius: 18px;
   cursor: pointer;
   text-align: center;
@@ -109,6 +130,11 @@ margin-bottom: 30px;
   text-decoration: none;
   position: relative; /* necessário pro z-index funcionar */
   z-index: 2;
+  align-items: center;
+  width: fit-content;
+}
+.agendehorario svg{
+  margin-right: 5px;
 }
 
 .agendehorario:hover {
@@ -129,16 +155,29 @@ margin-bottom: 30px;
 .blob2 {
   position: absolute;
   width: 800px;
-  right: 300px;
+  right: 200px;
   transform: rotate(200deg); /* gira 45 graus */
   bottom: -480px;
   z-index: -1px;
 }
 .blob3 {
-  position: absolute;
+  margin-top: 1200px;
+  margin-left: -190px; /* move pra esquerda */
   width: 800px;
-  right: 1100px;
-  transform: rotate(180deg); /* gira 45 graus */
-  bottom: -550px;
-  z-index: -1px;
+  transform: rotate(180deg);
+}
+
+.icon-redes {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 50px;
+  z-index: 3;
+  list-style: none;
+  color: #604136;
+  right: 120px;
+  bottom: 150px;
+  gap: 15px;
 }

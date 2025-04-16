@@ -1,9 +1,17 @@
 import "./hero.css";
 import "./Navbar.css";
 import manicureImg from "../assets/upscalemedia-transformed (2) (1).png";
-import manicurepng from "../assets/manicure.png"
-import { Blob, Blob2 ,Blob3} from "./Blob.jsx";
-// import { IconName } from "react-icons/fa";
+import manicurepng from "../assets/manicure.png";
+import pedicurepng from "../assets/pedicure.png";
+import terapiapng from "../assets/lotus.png";
+import depilacaopng from "../assets/legs.png";
+import massagempng from "../assets/facial-treatment.png";
+import muitomaispng from "../assets/love.png";
+import { Blob, Blob2, Blob3 } from "./Blob.jsx";
+import { BsInstagram } from "react-icons/bs";
+import { SiWhatsapp } from "react-icons/si";
+import quadropng from "../assets/quadro.png";
+import { LuCalendarHeart } from "react-icons/lu";
 
 const Home = () => {
   return (
@@ -47,11 +55,25 @@ const Home = () => {
         <Blob2 />
         <Blob />
         <Blob3 />
-
+        <div>
+          <ul className="icon-redes">
+            <li>
+              <BsInstagram />
+            </li>
+            <li>
+              <SiWhatsapp />
+            </li>
+          </ul>
+        </div>
 
         <div className="img-mulheres">
           <img src={manicureImg} alt="" />
         </div>
+
+        <div className="img-quadro">
+          <img src={quadropng} alt="" />
+        </div>
+
         <div className="hero-text">
           <h1>
             Cuidando de você <br />
@@ -59,15 +81,43 @@ const Home = () => {
           </h1>
           <h2>Beleza que começa no cuidado com você</h2>
           <div className="Hero-servicos">
-            <ul>
-              <li><img className="icone-esmalte" src={manicurepng} alt="" /> Manicure</li>
-              <li>Pedicure</li>
-              <li>Depilação</li>
+            <ul className="linha1">
+              <li>
+                <img className="icon-trabalhos" src={manicurepng} alt="" />{" "}
+                Manicure
+              </li>
+
+              <li>
+                <img className="icon-trabalhos" src={pedicurepng} alt="" />{" "}
+                Pedicure
+              </li>
             </ul>
-            <ul>
-            <li>Terapias</li>
-              <li>Massagens</li>
-              <li id="reiki">Reiki ,Reflexologia <br />e muito mais </li>
+            <ul className="linha2">
+              <li>
+                <img className="icon-trabalhos" src={depilacaopng} alt="" />{" "}
+                Depilação
+              </li>
+
+              <li>
+                <img className="icon-trabalhos2" src={terapiapng} alt="" />{" "}
+                Terapias
+              </li>
+            </ul>
+            <ul className="linha3">
+              <li>
+                {" "}
+                <img className="icon-trabalhos" src={massagempng} alt="" />
+                Massagens
+              </li>
+              <li id="reiki">
+                {" "}
+                <img
+                  className="icon-trabalhos"
+                  src={muitomaispng}
+                  alt=""
+                />{" "}
+                Reiki ,Reflexologia <br />e muito mais{" "}
+              </li>
             </ul>
           </div>
           <div className="botaoAgendarHrr">
@@ -76,6 +126,7 @@ const Home = () => {
               href="https://wa.me/5547984731947?text=Olá%2C%20gostaria%20de%20agendar%20um%20horário%20com%20a%20Vera%20Alice!"
               target="blank"
             >
+              <LuCalendarHeart />
               Agende um horário
             </a>
           </div>
