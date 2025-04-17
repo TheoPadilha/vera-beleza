@@ -4,6 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
 .hero-main {
   position: relative;
   display: flex;
@@ -17,7 +21,7 @@
 .img-mulheres {
   position: absolute;
   bottom: 77px; /* ou top: 0; depende de onde você quer ela */
-  right: 250px; /* ou left: 0 */
+  right: 210px; /* ou left: 0 */
   width: 600px; /* exemplo */
   z-index: 2;
 }
@@ -27,18 +31,28 @@
   right: 580px; 
 } */
 
-.img-quadro{
+.img-quadro {
   margin-bottom: 500px;
   margin-left: -1000px;
 }
-
+.bg-folha {
+  position: absolute;
+  scale: 1.2;
+  right: 60px;
+  top: 100px;
+  z-index: -1;
+}
 
 .hero-container {
-  background-color: #ffe0d3;
+  background-image: url("../assets/bg-home4.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   font-family: sans-serif;
   max-height: 100vh;
   position: relative; /* <- importante */
   overflow: hidden; /* <- corta o que passar */
+  z-index: 0;
 }
 
 .hero-header {
@@ -95,19 +109,31 @@
 }
 
 .icon-trabalhos {
+  display: flex;
+  justify-content: center;
   width: 35px;
   margin-right: 10px;
 }
 .icon-trabalhos2 {
   width: 50px;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .linha1 {
   display: flex;
-  gap: 18px;
+  gap: 146px;
+  margin-left: 5px;
 }
 
+.linha2 {
+  display: flex;
+  gap: 132px;
+}
+
+.linha3 {
+  display: flex;
+  gap: 122px;
+}
 #reiki {
   font-size: 23px;
 }
@@ -133,7 +159,7 @@
   align-items: center;
   width: fit-content;
 }
-.agendehorario svg{
+.agendehorario svg {
   margin-right: 5px;
 }
 
@@ -145,10 +171,9 @@
 .blob1 {
   position: absolute;
   width: 800px;
-  right: -190px;
-
+  right: -200px;
   transform: rotate(200deg); /* gira 45 graus */
-  bottom: -300px;
+  bottom: -263px;
   z-index: 0px;
 }
 
@@ -168,7 +193,7 @@
 }
 
 .icon-redes {
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -176,8 +201,25 @@
   font-size: 50px;
   z-index: 3;
   list-style: none;
-  color: #604136;
-  right: 120px;
-  bottom: 150px;
+
+  right: 20px;
+  bottom: 0px;
   gap: 15px;
+}
+
+.icon-redes a {
+  color: #604136;
+}
+
+.icon-redes li {
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.icon-redes li:hover {
+  transform: scale(1.2);
+}
+.icon-redes a:hover {
+  color: #a47464; /* tom mais claro rosado */
+  text-shadow: 0px 0px 8px rgba(255, 192, 203, 0.5);
 }

@@ -12,6 +12,7 @@ import { BsInstagram } from "react-icons/bs";
 import { SiWhatsapp } from "react-icons/si";
 import quadropng from "../assets/quadro.png";
 import { LuCalendarHeart } from "react-icons/lu";
+import bgFolha from "../assets/bg-folha.png"
 
 const Home = () => {
   return (
@@ -27,13 +28,13 @@ const Home = () => {
                   <a href="#">Início</a>
                 </li>
                 <li>
-                  <a href="#">Serviços</a>
+                  <a href="#servicos">Serviços</a>
                 </li>
                 <li>
-                  <a href="#">Sobre</a>
+                  <a href="#sobre">Sobre</a>
                 </li>
                 <li>
-                  <a href="#">Contato</a>
+                  <a href="#contato">Contato</a>
                 </li>
                 <div className="blob-header">
                   <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -58,10 +59,20 @@ const Home = () => {
         <div>
           <ul className="icon-redes">
             <li>
-              <BsInstagram />
+              <a
+                href="https://www.instagram.com/veraalicecristofoli"
+                target="blank"
+              >
+                <BsInstagram />
+              </a>
             </li>
             <li>
-              <SiWhatsapp />
+              <a
+                href="https://wa.me/5547984731947?text=Olá%2C%20gostaria%20de%20agendar%20um%20horário%20com%20a%20Vera%20Alice!"
+                target="blank"
+              >
+                <SiWhatsapp />
+              </a>
             </li>
           </ul>
         </div>
@@ -72,6 +83,10 @@ const Home = () => {
 
         <div className="img-quadro">
           <img src={quadropng} alt="" />
+        </div>
+
+        <div className="bg-folha">
+          <img src={bgFolha} alt="" />
         </div>
 
         <div className="hero-text">

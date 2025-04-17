@@ -17,8 +17,8 @@
 }
 
 .logo {
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 34px;
+  font-family: "Dancing Script", cursive;
+  font-size: 38px;
   color: #9b493b;
   font-weight: 600;
 }
@@ -27,7 +27,7 @@
   list-style: none;
   display: flex;
   gap: 130px;
-  z-index: 999;
+
 }
 
 .nav-links li a {
@@ -36,7 +36,7 @@
   color: #4a2c2a;
   font-weight: 500;
   transition: color 0.1s ease;
-  z-index: 999;
+
 }
 
 .nav-links li a:hover {
@@ -54,6 +54,7 @@
   height: 200px;
   z-index: -1;
   transform: rotate(-160deg) scale(1.2);
+  pointer-events: none;
 
 }
 .navLink_colorido {
