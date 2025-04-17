@@ -21,15 +21,35 @@ import bgFolha6 from "../assets/folhas/bg-folha6.png";
 import bgFolha7 from "../assets/folhas/bg-folha7.png";
 import bgFolha8 from "../assets/folhas/bg-folha8.png";
 import bgFolha9 from "../assets/folhas/bg-folha9.png";
+import { useEffect, useState } from "react";
 
 const Home = () => {
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      setMousePos({ x: event.clientX, y: event.clientY });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  const folhaStyle = {
+    transform: `translate(${mousePos.x * 0.06}px, ${mousePos.y * 0.07}px)`,
+    transition: "transform 0.1s ease-out",
+  };
+  
   return (
     <div className="hero-container">
       {/* NAVBAR */}
       <div className="nav_rei">
         <header className="navbar">
           <div className="bg-folha7">
-            <img src={bgFolha7} alt="" />
+            <img src={bgFolha7} alt="" style={folhaStyle} />
           </div>
           <div className="navbar-container">
             <div className="logo">Vera Alice</div>
@@ -97,31 +117,31 @@ const Home = () => {
         </div>
 
         <div className="bg-folha">
-          <img src={bgFolha} alt="" />
+          <img src={bgFolha} alt="" style={folhaStyle} />
         </div>
         <div className="bg-folha2">
-          <img src={bgFolha2} alt="" />
+          <img src={bgFolha2} alt="" style={folhaStyle} />
         </div>
         <div className="bg-folha3">
-          <img src={bgFolha3} alt="" />
+          <img src={bgFolha3} alt="" style={folhaStyle}/>
         </div>
         <div className="bg-folha4">
-          <img src={bgFolha4} alt="" />
+          <img src={bgFolha4} alt="" style={folhaStyle}/>
         </div>
         <div className="bg-folha5">
-          <img src={bgFolha5} alt="" />
+          <img src={bgFolha5} alt="" style={folhaStyle}/>
         </div>
         <div className="bg-folha6">
-          <img src={bgFolha6} alt="" />
+          <img src={bgFolha6} alt="" style={folhaStyle}/>
         </div>
 
         {/* BG-FOLHA7 ESTA NO NAVBAR */}
 
         <div className="bg-folha8">
-          <img src={bgFolha8} alt="" />
+          <img src={bgFolha8} alt="" style={folhaStyle}/>
         </div>
         <div className="bg-folha9">
-          <img src={bgFolha9} alt="" />
+          <img src={bgFolha9} alt="" style={folhaStyle}/>
         </div>
 
         <div className="hero-text">

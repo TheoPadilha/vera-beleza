@@ -34,6 +34,7 @@ html {
 .img-quadro {
   margin-bottom: 500px;
   margin-left: -1000px;
+  z-index: 0;
 }
 
 .hero-container {
@@ -241,6 +242,8 @@ html {
   scale: .6;
   left: 850px;
   top: -15px;
+ z-index:-1;
+
 }
 .bg-folha5 {
   position: absolute;
