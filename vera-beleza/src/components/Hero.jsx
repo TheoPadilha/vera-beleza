@@ -12,16 +12,17 @@ import { BsInstagram } from "react-icons/bs";
 import { SiWhatsapp } from "react-icons/si";
 import quadropng from "../assets/quadro.png";
 import { LuCalendarHeart } from "react-icons/lu";
-import bgFolha from "../assets/folhas/bg-folha (1).png";
-import bgFolha2 from "../assets/folhas/bg-folha2.png";
-import bgFolha3 from "../assets/folhas/bg-folha3.png";
-import bgFolha4 from "../assets/folhas/bg-folha4.png";
-import bgFolha5 from "../assets/folhas/bg-folha5.png";
-import bgFolha6 from "../assets/folhas/bg-folha6.png";
-import bgFolha7 from "../assets/folhas/bg-folha7.png";
-import bgFolha8 from "../assets/folhas/bg-folha8.png";
-import bgFolha9 from "../assets/folhas/bg-folha9.png";
+// import bgFolha from "../assets/folhas/bg-folha (1).png";
+// import bgFolha2 from "../assets/folhas/bg-folha2.png";
+// import bgFolha3 from "../assets/folhas/bg-folha3.png";
+// import bgFolha4 from "../assets/folhas/bg-folha4.png";
+// import bgFolha5 from "../assets/folhas/bg-folha5.png";
+// import bgFolha6 from "../assets/folhas/bg-folha6.png";
+// import bgFolha7 from "../assets/folhas/bg-folha7.png";
+// import bgFolha8 from "../assets/folhas/bg-folha8.png";
+// import bgFolha9 from "../assets/folhas/bg-folha9.png";
 import { useEffect, useState } from "react";
+import PhysicsCanvas from "./PhysicsCanvas"; // Importa o componente que criamos
 
 const Home = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -44,13 +45,15 @@ const Home = () => {
   };
   
   return (
-    <div className="hero-container">
+    <div className="hero-container"  style={{ position: "relative" }}>
+       {/* Renderiza o canvas de animação com p5.js */}
+       <PhysicsCanvas />
       {/* NAVBAR */}
       <div className="nav_rei">
         <header className="navbar">
-          <div className="bg-folha7">
+          {/* <div className="bg-folha7">
             <img src={bgFolha7} alt="" style={folhaStyle} />
-          </div>
+          </div> */}
           <div className="navbar-container">
             <div className="logo">Vera Alice</div>
             <div className="navLink_colorido">
@@ -116,7 +119,7 @@ const Home = () => {
           <img src={quadropng} alt="" />
         </div>
 
-        <div className="bg-folha">
+        {/* <div className="bg-folha">
           <img src={bgFolha} alt="" style={folhaStyle} />
         </div>
         <div className="bg-folha2">
@@ -133,16 +136,16 @@ const Home = () => {
         </div>
         <div className="bg-folha6">
           <img src={bgFolha6} alt="" style={folhaStyle}/>
-        </div>
+        </div> */}
 
         {/* BG-FOLHA7 ESTA NO NAVBAR */}
 
-        <div className="bg-folha8">
+        {/* <div className="bg-folha8">
           <img src={bgFolha8} alt="" style={folhaStyle}/>
         </div>
         <div className="bg-folha9">
           <img src={bgFolha9} alt="" style={folhaStyle}/>
-        </div>
+        </div> */}
 
         <div className="hero-text">
           <h1>
