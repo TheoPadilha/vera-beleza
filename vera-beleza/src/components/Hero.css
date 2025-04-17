@@ -35,16 +35,10 @@ html {
   margin-bottom: 500px;
   margin-left: -1000px;
 }
-.bg-folha {
-  position: absolute;
-  scale: 1.2;
-  right: 60px;
-  top: 100px;
-  z-index: -1;
-}
 
 .hero-container {
-  background-image: url("../assets/bg-home4.png");
+  /* background-image: url("../assets/bg-home4.png"); */
+  background-color: #ffe0d6;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -222,4 +216,55 @@ html {
 .icon-redes a:hover {
   color: #a47464; /* tom mais claro rosado */
   text-shadow: 0px 0px 8px rgba(255, 192, 203, 0.5);
+}
+
+.bg-folha {
+  position: absolute;
+  scale: 0.28;
+  left: 1560px;
+  top: -10px;
+}
+.bg-folha2 {
+  position: absolute;
+  scale: .6;
+  left: 450px;
+  top: 230px;
+}
+.bg-folha3 {
+  position: absolute;
+  scale: .6;
+  left: 0px;
+  top: 180px;
+}
+.bg-folha4 {
+  position: absolute;
+  scale: .6;
+  left: 850px;
+  top: -15px;
+}
+.bg-folha5 {
+  position: absolute;
+  scale: 0.6;
+  left: 1250px;
+  top: 165px;
+}
+.bg-folha6 {
+  position: absolute;
+  scale: 0.6;
+  left: 1010px;
+  top: 465px;
+}
+/* bg-folha7 (ESTA NO NAVBAR.CSS) */
+
+.bg-folha8 {
+  position: absolute;
+  scale: 0.65;
+  left: 560px;
+  top: 658px;
+}
+.bg-folha9 {
+  position: absolute;
+  scale: 0.6;
+  left: 80px;
+  top: 380px;
 }
