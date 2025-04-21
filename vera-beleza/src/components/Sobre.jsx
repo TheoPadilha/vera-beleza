@@ -1,23 +1,53 @@
-import './Sobre.css';
-import { motion } from 'framer-motion';
+import "./Sobre.css";
+import veraAliceFoto from "/vera_img.jpg"; // Foto da Vera
+import bgmancha from "../assets/sobre/bg-mancha-sobre.png"; // Fundo mancha
+import bgmancha2 from "../assets/sobre/bg-mancha-sobre2.png"; // Fundo mancha
+import bgalicate from "../assets/sobre/bg-sobre-alicate.png"; // Fundo mancha
+import bgalicate2 from "../assets/sobre/bg-sobre-alicate2.png"; // Fundo mancha
+import bgmeditando from "../assets/sobre/bg-sobre-meditando.png"; // Fundo mancha
+import bglotus from "../assets/sobre/bg-lotus-sobre.png"; // Fundo mancha
+import bgesmalte from "../assets/sobre/bg-sobre-esmalte.png"; // Fundo mancha
+import { motion } from "framer-motion";
 
 export default function Sobre() {
   return (
-    <motion.section 
-      className="sobre" 
-      id="sobre"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-    >
-      <div className="container">
-        <h2>Sobre Vera Alice</h2>
-        <p>
-          Com mais de 10 anos de experiência, Vera Alice Cristofoli é especialista em cuidados com as mãos e bem-estar.
-          Oferece serviços de manicure, reflexologia, massagens relaxantes e muito mais, sempre com um toque especial de carinho, atenção e profissionalismo.
-        </p>
+    <section className="sobre" id="sobre">
+      <div className="container-sobre">
+        <img src={bgmancha} className="bgmancha" alt="Fundo decorativo" />
+        <img src={bgmancha2} className="bgmancha2" alt="Fundo decorativo" />
+        {/* <img src={bgalicate} className="alicate" alt="Fundo decorativo" /> */}
+        {/* <img src={bgalicate2} className="alicate2" alt="Fundo decorativo" /> */}
+        {/* <img src={bgmeditando} className="meditando" alt="Fundo decorativo" /> */}
+        {/* <img src={bglotus} className="lotus" alt="Fundo decorativo" /> */}
+        {/* <img src={bgesmalte} className="esmalte" alt="Fundo decorativo" /> */}
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className="texto-img">
+            <div className="texto-sobre">
+              <h2>Sobre Vera Alice</h2>
+              <p>
+                Com mais de 20 anos de experiência no ramo da estética e
+                bem-estar, Vera Alice Cristofoli é uma profissional altamente
+                qualificada e reconhecida por seu cuidado e dedicação.
+                Especialista em cuidados com as mãos, oferece serviços de
+                manicure, pedicure, depilação, reflexologia, massagens relaxantes e tratamentos
+                voltados ao equilíbrio físico e energético. Certificada em Reiki
+                e outras terapias integrativas, une técnica, sensibilidade e um
+                toque especial de carinho em cada atendimento. Seu compromisso
+                com o bem-estar e a autoestima de suas clientes é o que torna
+                cada experiência única e transformadora.
+              </p>
+            </div>
+            <div className="foto-vera">
+              <img src={veraAliceFoto} alt="Vera Alice Cristofoli" />
+            </div>
+          </div>
+        </motion.section>
       </div>
-    </motion.section>
+    </section>
   );
 }

@@ -1,26 +1,18 @@
 import "./hero.css";
 import "./Navbar.css";
-import manicureImg from "../assets/upscalemedia-transformed (2) (1).png";
-import manicurepng from "../assets/manicure.png";
-import pedicurepng from "../assets/pedicure.png";
-import terapiapng from "../assets/lotus.png";
-import depilacaopng from "../assets/legs.png";
-import massagempng from "../assets/facial-treatment.png";
-import muitomaispng from "../assets/love.png";
+import manicureImg from "../assets/home/upscalemedia-transformed (2) (1).png";
+import manicurepng from "../assets/home/manicure.png";
+import pedicurepng from "../assets/home/pedicure.png";
+import terapiapng from "../assets/home/lotus.png";
+import depilacaopng from "../assets/home/legs.png";
+import massagempng from "../assets/home/facial-treatment.png";
+import muitomaispng from "../assets/home/love.png";
 import { Blob, Blob2, Blob3 } from "./Blob.jsx";
 import { BsInstagram } from "react-icons/bs";
 import { SiWhatsapp } from "react-icons/si";
-import quadropng from "../assets/quadro.png";
+import quadropng from "../assets/home/quadro.png";
 import { LuCalendarHeart } from "react-icons/lu";
-// import bgFolha from "../assets/folhas/bg-folha (1).png";
-// import bgFolha2 from "../assets/folhas/bg-folha2.png";
-// import bgFolha3 from "../assets/folhas/bg-folha3.png";
-// import bgFolha4 from "../assets/folhas/bg-folha4.png";
-// import bgFolha5 from "../assets/folhas/bg-folha5.png";
-// import bgFolha6 from "../assets/folhas/bg-folha6.png";
-// import bgFolha7 from "../assets/folhas/bg-folha7.png";
-// import bgFolha8 from "../assets/folhas/bg-folha8.png";
-// import bgFolha9 from "../assets/folhas/bg-folha9.png";
+
 import { useEffect, useState } from "react";
 import PhysicsCanvas from "./PhysicsCanvas"; // Importa o componente que criamos
 
@@ -43,11 +35,11 @@ const Home = () => {
     transform: `translate(${mousePos.x * 0.06}px, ${mousePos.y * 0.07}px)`,
     transition: "transform 0.1s ease-out",
   };
-  
+
   return (
-    <div className="hero-container"  style={{ position: "relative" }}>
-       {/* Renderiza o canvas de animação com p5.js */}
-       <PhysicsCanvas />
+    <div className="hero-container" style={{ position: "relative" }}>
+      {/* Renderiza o canvas de animação com p5.js */}
+      <PhysicsCanvas />
       {/* NAVBAR */}
       <div className="nav_rei">
         <header className="navbar">
@@ -62,13 +54,13 @@ const Home = () => {
                   <a href="#">Início</a>
                 </li>
                 <li>
-                  <a href="#servicos">Serviços</a>
-                </li>
-                <li>
                   <a href="#sobre">Sobre</a>
                 </li>
                 <li>
-                  <a href="#contato">Contato</a>
+                  <a href="#servicos">Serviços</a>
+                </li>
+                <li>
+                  <a href="#contato">Depoimentos</a>
                 </li>
                 <div className="blob-header">
                   <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -118,34 +110,6 @@ const Home = () => {
         <div className="img-quadro">
           <img src={quadropng} alt="" />
         </div>
-
-        {/* <div className="bg-folha">
-          <img src={bgFolha} alt="" style={folhaStyle} />
-        </div>
-        <div className="bg-folha2">
-          <img src={bgFolha2} alt="" style={folhaStyle} />
-        </div>
-        <div className="bg-folha3">
-          <img src={bgFolha3} alt="" style={folhaStyle}/>
-        </div>
-        <div className="bg-folha4">
-          <img src={bgFolha4} alt="" style={folhaStyle}/>
-        </div>
-        <div className="bg-folha5">
-          <img src={bgFolha5} alt="" style={folhaStyle}/>
-        </div>
-        <div className="bg-folha6">
-          <img src={bgFolha6} alt="" style={folhaStyle}/>
-        </div> */}
-
-        {/* BG-FOLHA7 ESTA NO NAVBAR */}
-
-        {/* <div className="bg-folha8">
-          <img src={bgFolha8} alt="" style={folhaStyle}/>
-        </div>
-        <div className="bg-folha9">
-          <img src={bgFolha9} alt="" style={folhaStyle}/>
-        </div> */}
 
         <div className="hero-text">
           <h1>
