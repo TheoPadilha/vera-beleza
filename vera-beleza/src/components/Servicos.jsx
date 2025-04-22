@@ -1,11 +1,13 @@
-import './Servicos.css';
-import { motion } from 'framer-motion';
+import "./Servicos.css";
+import { motion } from "framer-motion";
+import { Blob4 } from "./Blob.jsx";
 
 export default function Servicos() {
   const servicos = [
     {
       titulo: "Manicure e Pedicure",
-      descricao: "Cuidado completo com unhas, hidratação e esmaltação impecável.",
+      descricao:
+        "Cuidado completo com unhas, hidratação e esmaltação impecável.",
     },
     {
       titulo: "Reflexologia",
@@ -15,16 +17,27 @@ export default function Servicos() {
       titulo: "Massagem Relaxante",
       descricao: "Momentos de relaxamento com técnicas suaves e revigorantes.",
     },
+    {
+      titulo: "Depilação",
+      descricao:
+        "Remoção de pelos com cera, garantindo resultado duradouro. Pele lisinha e bem cuidada.",
+    },
+    {
+      titulo: "Reiki e Terapias",
+      descricao:
+        "Terapias que restauram sua energia e trazem leveza ao seu dia. Técnicas que promovem bem-estar profundo e harmonia interior.",
+    },
   ];
 
   return (
     <section className="servicos" id="servicos">
+      <Blob4 />
       <div className="container">
         <h2>Nossos Serviços</h2>
         <div className="cards">
           {servicos.map((servico, index) => (
-            <motion.div 
-              key={index} 
+            <motion.div
+              key={index}
               className="card"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

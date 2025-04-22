@@ -1,6 +1,7 @@
 .servicos {
+  font-family: 'Poppins', sans-serif;
   padding: 80px 20px;
-  background-color: #fceeee; /* tom rosado suave, combinando com o restante do site */
+  background-color: #f9eae0; /* tom rosado suave, combinando com o restante do site */
   color: #5c4b4b;
   text-align: center;
 }
@@ -13,7 +14,7 @@
 .servicos h2 {
   font-size: 2.4rem;
   margin-bottom: 40px;
-  color: #8b5e5e; /* tom do título usado no site */
+  color: #6d4925; /* tom do título usado no site */
   font-weight: 600;
 }
 
@@ -25,29 +26,44 @@
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.7);
+  background: #fef6ef;
   backdrop-filter: blur(8px);
   border-radius: 20px;
   padding: 30px;
   width: 280px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:last-child{
+  width:43.5%;
+}
+.card:nth-last-child(2){
+  width:43.5%;
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-25px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #b66b7d; /* tom rosa queimado, elegante */
+  color: #6d4925;; /* tom rosa queimado, elegante */
   font-weight: 600;
 }
 
 .card p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #6e5b5b; /* mantendo a consistência dos parágrafos */
+  color: #876645; /* mantendo a consistência dos parágrafos */
+}
+
+.blob4{
+  position: absolute;
+  width: 30%;
+  rotate: 25deg;
+  z-index: 0;
+  bottom:-1100px;
+  left: -30px;
 }

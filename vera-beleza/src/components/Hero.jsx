@@ -51,16 +51,17 @@ const Home = () => {
             <div className="navLink_colorido">
               <ul className="nav-links">
                 <li>
-                  <a href="#">Início</a>
-                </li>
-                <li>
                   <a href="#sobre">Sobre</a>
                 </li>
+
                 <li>
                   <a href="#servicos">Serviços</a>
                 </li>
                 <li>
                   <a href="#contato">Depoimentos</a>
+                </li>
+                <li>
+                  <a href="#">Local</a>
                 </li>
                 <div className="blob-header">
                   <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">

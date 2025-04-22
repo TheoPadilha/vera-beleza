@@ -63,6 +63,9 @@
   z-index: 999;
 }
 
-@media (max-width: 1500px){
+@media (max-width: 1500px), (max-height:800px ){
+  .nav-links{
+    scale: 0.85;
+  }
 
 }
