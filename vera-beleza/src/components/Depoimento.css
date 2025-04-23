@@ -1,0 +1,64 @@
+.depoimento {
+  background-image: url("../assets/sobre/bg-sobre-bg.png");
+  background-size: cover; /* Mantém a imagem coberta sem distorção */
+  background-position: 50% -690px; /* Centraliza horizontalmente e fixa no topo */
+  background-repeat: no-repeat;
+  padding: 4rem 2rem;
+  background-color: #ffeddd;
+}
+
+.depoimento__titulo {
+  font-family: "poppins";
+  text-align: center;
+  color: #6d4925;
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+}
+
+.depoimento__subtitulo {
+    font-size: 18px;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #555;
+}
+
+.depoimento__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.depoimento__card {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.depoimento__comentario {
+  font-style: italic;
+  color: #555;
+  font-size: 1.01rem;
+  margin-bottom: 1rem;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.depoimento__cliente {
+  display: flex;
+  flex-direction: column; /* Coloca nome e info na vertical */
+  align-items: center; /* Centraliza o conteúdo */
+  margin-top: 1rem;
+}
+
+.depoimento__nome {
+  color: #ff6b81;
+  font-size: 1.1rem; /* Aumentei o tamanho do nome */
+  text-align: center; /* Alinha o nome ao centro */
+}
+
+.depoimento__info {
+  font-size: 0.8rem;
+  color: #777;
+  text-align: center; /* Alinha a informação ao centro */
+}

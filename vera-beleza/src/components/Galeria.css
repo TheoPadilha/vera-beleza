@@ -34,6 +34,9 @@
   background-color: #ffffff;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 250px;
+  max-height: 250px;
+  margin: 0 auto; /* centraliza no grid */
 }
 
 .img-wrapper img {

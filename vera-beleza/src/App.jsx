@@ -1,10 +1,9 @@
+import Hero from "./components/Hero";
+import Sobre from "./components/Sobre";
+import Servicos from "./components/Servicos";
 
-import Hero from './components/Hero';
-import Sobre from './components/Sobre';
-import Servicos from './components/Servicos';
-import Galeria from './components/Galeria';
-import Contato from './components/Contato';
-import Footer from './components/Footer';
+import Depoimento from "./components/Depoimento";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -12,8 +11,7 @@ function App() {
       <Hero />
       <Sobre />
       <Servicos />
-      <Galeria />
-      <Contato />
+      <Depoimento />
       <Footer />
     </>
   );

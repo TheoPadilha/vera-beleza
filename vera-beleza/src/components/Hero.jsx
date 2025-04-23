@@ -58,7 +58,7 @@ const Home = () => {
                   <a href="#servicos">Serviços</a>
                 </li>
                 <li>
-                  <a href="#contato">Depoimentos</a>
+                  <a href="#Depoimentos">Depoimentos</a>
                 </li>
                 <li>
                   <a href="#">Local</a>

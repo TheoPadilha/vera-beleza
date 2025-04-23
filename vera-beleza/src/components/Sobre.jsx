@@ -32,14 +32,21 @@ export default function Sobre() {
               <p>
                 Com mais de 20 anos de experiência no ramo da estética e
                 bem-estar, Vera Alice Cristofoli é uma profissional altamente
-                qualificada e reconhecida por seu cuidado e dedicação.
-                Especialista em cuidados com as mãos, oferece serviços de
-                manicure, pedicure, depilação, reflexologia, massagens relaxantes e tratamentos
-                voltados ao equilíbrio físico e energético. Certificada em Reiki
-                e outras terapias integrativas, une técnica, sensibilidade e um
-                toque especial de carinho em cada atendimento. Seu compromisso
-                com o bem-estar e a autoestima de suas clientes é o que torna
-                cada experiência única e transformadora.
+                qualificada e reconhecida por seu cuidado, dedicação e atenção
+                aos detalhes. Especialista em cuidados com as mãos, oferece
+                serviços de manicure, pedicure, depilação, reflexologia,
+                massagens relaxantes e terapias voltadas ao equilíbrio físico e
+                energético. Certificada em Reiki e outras práticas integrativas,
+                Vera une técnica, sensibilidade e um toque especial de carinho
+                em cada atendimento, proporcionando uma experiência única e
+                profundamente acolhedora. Seu compromisso vai além da estética:
+                ela cuida da autoestima e do bem-estar de cada cliente como se
+                fosse única. Ao longo dos anos, construiu uma clientela fiel,
+                com mais de 70 clientes fixas que a acompanham há muito tempo,
+                reconhecendo nela não só uma excelente profissional, mas também
+                uma referência de confiança, empatia e dedicação. Cada sessão
+                com a Vera é mais do que um serviço — é um momento de cuidado,
+                acolhimento e transformação.
               </p>
             </div>
             <div className="foto-vera">
