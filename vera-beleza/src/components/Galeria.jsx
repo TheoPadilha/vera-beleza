@@ -1,14 +1,14 @@
-import './Galeria.css';
-import { motion } from 'framer-motion';
+import "./Galeria.css";
+import { motion } from "framer-motion";
 
 export default function Galeria() {
   const imagens = [
-    'https://via.placeholder.com/300x200?text=Foto+1',
-    'https://via.placeholder.com/300x200?text=Foto+2',
-    'https://via.placeholder.com/300x200?text=Foto+3',
-    'https://via.placeholder.com/300x200?text=Foto+4',
-    'https://via.placeholder.com/300x200?text=Foto+5',
-    'https://via.placeholder.com/300x200?text=Foto+6',
+    "../assets/galeria/trabalho1.jpeg",
+    "https://via.placeholder.com/300x200?text=Foto+2",
+    "https://via.placeholder.com/300x200?text=Foto+3",
+    "https://via.placeholder.com/300x200?text=Foto+4",
+    "https://via.placeholder.com/300x200?text=Foto+5",
+    "https://via.placeholder.com/300x200?text=Foto+6",
   ];
 
   return (
@@ -17,8 +17,8 @@ export default function Galeria() {
         <h2>Galeria de Trabalhos</h2>
         <div className="grid">
           {imagens.map((img, index) => (
-            <motion.div 
-              key={index} 
+            <motion.div
+              key={index}
               className="img-wrapper"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}

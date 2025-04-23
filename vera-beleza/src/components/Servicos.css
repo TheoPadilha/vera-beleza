@@ -1,10 +1,17 @@
 .servicos {
+  position: relative;
   font-family: 'Poppins', sans-serif;
   padding: 80px 20px;
-  background-color: #f9eae0; /* tom rosado suave, combinando com o restante do site */
+  background-image: url("../assets/sobre/bg-sobre-bg.png");
+  background-size: cover; /* Mantém a imagem coberta sem distorção */
+  background-position: 50% 0; /* Centraliza horizontalmente e fixa no topo */
+  background-repeat: no-repeat;
+ /* Imagem de fundo fixa em relação à janela */
   color: #5c4b4b;
   text-align: center;
+  overflow: hidden;
 }
+
 
 .servicos .container {
   max-width: 1000px;
@@ -64,6 +71,15 @@
   width: 30%;
   rotate: 25deg;
   z-index: 0;
-  bottom:-1100px;
+  top : -30px;
   left: -30px;
+}
+.blob5{
+  position: absolute;
+  width: 30%;
+  rotate: 25deg;
+  z-index: 0;
+  bottom:0px;
+  left: 1400px;
+
 }

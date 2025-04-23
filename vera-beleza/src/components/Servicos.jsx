@@ -1,6 +1,6 @@
 import "./Servicos.css";
 import { motion } from "framer-motion";
-import { Blob4 } from "./Blob.jsx";
+import { Blob4,Blob5 } from "./Blob.jsx";
 
 export default function Servicos() {
   const servicos = [
@@ -31,7 +31,7 @@ export default function Servicos() {
 
   return (
     <section className="servicos" id="servicos">
-      <Blob4 />
+      
       <div className="container">
         <h2>Nossos Serviços</h2>
         <div className="cards">

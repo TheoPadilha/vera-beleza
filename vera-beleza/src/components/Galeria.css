@@ -1,6 +1,10 @@
 .galeria {
   padding: 80px 20px;
-  background-color: #fceeee; /* tom rosado pastel para harmonia com o restante */
+  background-image: url("../assets/sobre/bg-sobre-bg.png"); /* tom rosado pastel para harmonia com o restante */
+  background-size: cover;
+  background-position: 50% -650px;
+  background-repeat: no-repeat;
+ ; /* Imagem de fundo fixa em relação à janela */
   text-align: center;
   color: #5c4b4b;
 }
@@ -11,9 +15,10 @@
 }
 
 .galeria h2 {
+  font-family: "Poppins";
   font-size: 2.4rem;
   margin-bottom: 40px;
-  color: #8b5e5e; /* tom dos títulos no restante do projeto */
+  color: #6d4925; /* tom dos títulos no restante do projeto */
   font-weight: 600;
 }
 
