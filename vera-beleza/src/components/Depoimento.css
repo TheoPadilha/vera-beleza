@@ -16,7 +16,8 @@
 }
 
 .depoimento__subtitulo {
-    font-size: 18px;
+  font-family: "poppins";
+  font-size: 18px;
   text-align: center;
   margin-bottom: 3rem;
   color: #555;
@@ -29,6 +30,11 @@
 }
 
 .depoimento__card {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #fff;
   border-radius: 1rem;
   padding: 1rem;
@@ -37,8 +43,9 @@
 
 .depoimento__comentario {
   font-style: italic;
-  color: #555;
-  font-size: 1.01rem;
+  color: #876645;
+  font-size: 1.05rem;
+
   margin-bottom: 1rem;
   max-width: 280px;
   margin: 0 auto;
@@ -52,12 +59,14 @@
 }
 
 .depoimento__nome {
-  color: #ff6b81;
+  display: flex;
+  justify-content: center;
+  color: #6d4925;
   font-size: 1.1rem; /* Aumentei o tamanho do nome */
-  text-align: center; /* Alinha o nome ao centro */
 }
 
 .depoimento__info {
+  display: flex;
   font-size: 0.8rem;
   color: #777;
   text-align: center; /* Alinha a informação ao centro */
