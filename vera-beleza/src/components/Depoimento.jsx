@@ -32,6 +32,12 @@ const Depoimento = () => {
       frase:
         "Profissional excelente, com muito a oferecer em serviços de qualidade! Super indico e recomendo se você busca bem estar",
     },
+    {
+      nome: "Theo H.",
+      idadeCidade: "19 anos – Camboriú",
+      frase:
+        "Otimo trabalho e um amor de pessoa ,sempre me renova com suas terapias.",
+    },
   ];
 
   return (
@@ -57,6 +63,7 @@ const Depoimento = () => {
           </div>
         ))}
       </div>
+      
     </section>
   );
 };

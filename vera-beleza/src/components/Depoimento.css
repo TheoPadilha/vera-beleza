@@ -1,5 +1,5 @@
 .depoimento {
-  background-image: url("../assets/sobre/bg-sobre-bg.png");
+  /* background-image: url("../assets/sobre/bg-sobre-bg.png"); */
   background-size: cover; /* Mantém a imagem coberta sem distorção */
   background-position: 50% -690px; /* Centraliza horizontalmente e fixa no topo */
   background-repeat: no-repeat;
@@ -27,6 +27,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  max-width: 1200px; /* Limita a largura total */
+  margin: 0 auto; /* Centraliza o grid */
 }
 
 .depoimento__card {

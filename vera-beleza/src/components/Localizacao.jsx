@@ -15,7 +15,7 @@ const Localizacao = () => {
           <iframe
             title="Mapa localização"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d444.41364233996336!2d-48.63862255724864!3d-26.988769056085182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d8b600af39c4a3%3A0x3e80e46dabdecb4a!2sNil%20Cabeleireiro!5e0!3m2!1spt-BR!2sbr!4v1745453199712!5m2!1spt-BR!2sbr"
-            width="80%"
+            width="100%"
             height="350"
             style={{ border: 0 }}
             allowFullScreen=""
@@ -25,7 +25,11 @@ const Localizacao = () => {
 
         <div className="imagem-local">
           <img
-            src="/imagens/local.jpg" // Substitua pelo caminho correto da sua imagem
+            src="/img-salao.jpg" // Substitua pelo caminho correto da sua imagem
+            alt="Foto do local de atendimento"
+          />
+          <img
+            src="/img-sala.jpg" // Substitua pelo caminho correto da sua imagem
             alt="Foto do local de atendimento"
           />
         </div>

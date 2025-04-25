@@ -1,6 +1,6 @@
 import "./Servicos.css";
 import { motion } from "framer-motion";
-import { Blob4,Blob5 } from "./Blob.jsx";
+import { Blob4, Blob5 } from "./Blob.jsx";
 
 export default function Servicos() {
   const servicos = [
@@ -31,7 +31,6 @@ export default function Servicos() {
 
   return (
     <section className="servicos" id="servicos">
-      
       <div className="container">
         <h2>Nossos Serviços</h2>
         <div className="cards">
@@ -48,6 +47,18 @@ export default function Servicos() {
               <p>{servico.descricao}</p>
             </motion.div>
           ))}
+        </div>
+      </div>
+      <div className="img-servicos">
+        <img src="/image3.png" alt="" />
+        <div className="img">
+          <div className="espaço"></div>
+          <img src="/image5.png" alt="" />
+        </div>
+        <img src="/image4.png" alt="" />
+        <div className="img">
+          <div className="espaço"></div>
+          <img src="/image6.png" alt="" />
         </div>
       </div>
     </section>

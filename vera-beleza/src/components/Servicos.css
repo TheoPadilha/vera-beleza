@@ -1,17 +1,16 @@
 .servicos {
   position: relative;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   padding: 80px 20px;
   background-image: url("../assets/sobre/bg-sobre-bg.png");
   background-size: cover; /* Mantém a imagem coberta sem distorção */
   background-position: 50% 0; /* Centraliza horizontalmente e fixa no topo */
   background-repeat: no-repeat;
- /* Imagem de fundo fixa em relação à janela */
+  /* Imagem de fundo fixa em relação à janela */
   color: #5c4b4b;
   text-align: center;
   overflow: hidden;
 }
-
 
 .servicos .container {
   max-width: 1000px;
@@ -23,6 +22,23 @@
   margin-bottom: 40px;
   color: #6d4925; /* tom do título usado no site */
   font-weight: 600;
+}
+
+.img-servicos {
+  margin-top: 144px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.img-servicos img , .img {
+  width: 245px;
+  height: 100%;
+}
+
+.espaço {
+  display: block;
+  padding: 20px;
+  margin: 30px;
 }
 
 .cards {
@@ -41,11 +57,11 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.card:last-child{
-  width:43.5%;
+.card:last-child {
+  width: 43.5%;
 }
-.card:nth-last-child(2){
-  width:43.5%;
+.card:nth-last-child(2) {
+  width: 43.5%;
 }
 
 .card:hover {
@@ -56,7 +72,7 @@
 .card h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #6d4925;; /* tom rosa queimado, elegante */
+  color: #6d4925; /* tom rosa queimado, elegante */
   font-weight: 600;
 }
 
@@ -66,20 +82,19 @@
   color: #876645; /* mantendo a consistência dos parágrafos */
 }
 
-.blob4{
+.blob4 {
   position: absolute;
   width: 30%;
   rotate: 25deg;
   z-index: 0;
-  top : -30px;
+  top: -30px;
   left: -30px;
 }
-.blob5{
+.blob5 {
   position: absolute;
   width: 30%;
   rotate: 25deg;
   z-index: 0;
-  bottom:0px;
+  bottom: 0px;
   left: 1400px;
-
 }
