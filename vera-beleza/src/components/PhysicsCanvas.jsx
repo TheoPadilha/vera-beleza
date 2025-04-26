@@ -24,17 +24,31 @@ const PhysicsCanvas = () => {
     p5.createCanvas(p5.windowWidth, p5.windowHeight).parent(canvasParentRef);
 
     // Posições fixas para as folhas
-    const leafPositions = [
-      { x: 650, y: 850 },
-      { x: 1750, y: 250 },
-      { x: 550, y: 450 },
-      { x: 930, y: 200 },
-      { x: 1100, y: 700 },
-      { x: 170, y: 600 },
-      { x: 1400, y: 350 },
-      { x: 230, y: 100 },
-      { x: 2000, y: 700 },
-    ];
+    const isMobile = p5.windowWidth < 768;
+
+    const leafPositions = isMobile
+      ? [
+        { x: 80, y: 100 },
+        { x: 200, y: 220 },
+        { x: 100, y: 350 },
+        { x: 250, y: 450 },
+        { x: 180, y: 600 },
+        { x: 50, y: 500 },
+        { x: 300, y: 320 },
+        { x: 130, y: 180 },
+        { x: 220, y: 80 },
+        ]
+      : [
+          { x: 650, y: 850 },
+          { x: 1750, y: 250 },
+          { x: 550, y: 450 },
+          { x: 930, y: 200 },
+          { x: 1100, y: 700 },
+          { x: 170, y: 600 },
+          { x: 1400, y: 350 },
+          { x: 230, y: 100 },
+          { x: 2000, y: 700 },
+        ];
 
     // Garantir que as folhas não sejam duplicadas
     if (leavesRef.current.length === 0) {
@@ -85,7 +99,8 @@ const PhysicsCanvas = () => {
       this.pos = this.initialPos.copy();
       this.vel = p5.createVector(0, 0);
       this.acc = p5.createVector(0, 0);
-      this.size = p5.random(124, 125);
+      this.size = p5.windowWidth < 768 ? 60 : p5.random(124, 125);
+
       this.img = images;
       this.shouldReturn = false;
     }

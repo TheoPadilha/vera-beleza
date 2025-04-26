@@ -50,16 +50,53 @@ export default function Servicos() {
         </div>
       </div>
       <div className="img-servicos">
-        <img src="/image3.png" alt="" />
-        <div className="img">
+        {/* Imagem sem classe - vindo de cima */}
+        <motion.img
+          src="/image1.png"
+          alt=""
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -100 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: false, margin: "-100px" }}
+        />
+
+        {/* Imagem com classe img - vindo de baixo */}
+        <motion.div
+          className="img"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 100 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: false, margin: "-100px" }}
+        >
           <div className="espaço"></div>
           <img src="/image5.png" alt="" />
-        </div>
-        <img src="/image4.png" alt="" />
-        <div className="img">
+        </motion.div>
+
+        {/* Imagem sem classe - vindo de cima */}
+        <motion.img
+          src="/image4.png"
+          alt=""
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -100 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: false, margin: "-100px" }}
+        />
+
+        {/* Imagem com classe img - vindo de baixo */}
+        <motion.div
+          className="img"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 100 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          viewport={{ once: false, margin: "-100px" }}
+        >
           <div className="espaço"></div>
           <img src="/image6.png" alt="" />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

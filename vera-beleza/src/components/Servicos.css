@@ -28,11 +28,12 @@
   margin-top: 144px;
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
+  height: 95%;
 }
 .img-servicos img , .img {
-  width: 245px;
-  height: 100%;
+  width: 250px;
+  height: 372px;
 }
 
 .espaço {

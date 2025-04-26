@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Depoimento.css"; // Importando o CSS separado
 
 const Depoimento = () => {
+  const cardRefs = useRef([]);
+
   const clientes = [
     {
       nome: "Ana L.",
@@ -19,7 +21,7 @@ const Depoimento = () => {
       nome: "Marlene R.",
       idadeCidade: "75 anos – Balneário Camboriú",
       frase:
-        "Sou cliente desta profissional a 26 anos. Tudo isso já diz o quanto estou satisfeita com sua atuação como manicure, depiladora e também como pessoa. A Verinha é dedicada, está sempre se atualizando e procura atender a todos com eficiência. Sua marca é a competência no ramo e gentileza no trato com a clientela. Quem experimenta não troca mais.",
+        "Sou cliente desta profissional a 26 anos. Tudo isso já diz o quanto estou satisfeita com sua atuação como manicure, depiladora e também como pessoa. A Verinha é dedicada, está sempre se atualizando e procura atender a todos com eficiência. Sua marca é a competência no ramo e gentileza no trato com a clientela. Quem experimenta não troca mais.",
     },
     {
       nome: "Rogério B.",
@@ -40,6 +42,39 @@ const Depoimento = () => {
     },
   ];
 
+  useEffect(() => {
+    // Configurando o Intersection Observer para animar os cards quando entrarem na tela
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("depoimento__card--visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Observando cada card
+    cardRefs.current.forEach((card) => {
+      if (card) {
+        observer.observe(card);
+      }
+    });
+
+    return () => {
+      cardRefs.current.forEach((card) => {
+        if (card) {
+          observer.unobserve(card);
+        }
+      });
+    };
+  }, []);
+
   return (
     <section className="depoimento" id="Depoimentos">
       <h2 className="depoimento__titulo">Transformamos autoestima em rotina</h2>
@@ -49,12 +84,15 @@ const Depoimento = () => {
 
       <div className="depoimento__cards">
         {clientes.map((cliente, index) => (
-          <div key={index} className="depoimento__card">
-            <p className="depoimento__comentario">“{cliente.frase}”</p>
+          <div
+            key={index}
+            className="depoimento__card depoimento__card--hidden"
+            ref={(el) => (cardRefs.current[index] = el)}
+          >
+            <p className="depoimento__comentario">"{cliente.frase}"</p>
             <div className="depoimento__cliente">
               <div>
                 <strong className="depoimento__nome">{cliente.nome}</strong>
-
                 <small className="depoimento__info">
                   {cliente.idadeCidade}
                 </small>
@@ -63,7 +101,6 @@ const Depoimento = () => {
           </div>
         ))}
       </div>
-      
     </section>
   );
 };

@@ -69,3 +69,15 @@
   }
 
 }
+
+@media (max-width:375px), (max-height: 667px){
+  .nav-links{
+    display: none;
+  }
+  .logo{
+    position: absolute;
+    scale: 0.8;
+    left: 10px;
+    top: 10px;
+  }
+}
