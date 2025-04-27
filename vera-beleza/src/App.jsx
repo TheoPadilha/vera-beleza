@@ -4,12 +4,14 @@ import Servicos from "./components/Servicos";
 import Localizacao from "./components/Localizacao";
 import Depoimento from "./components/Depoimento";
 import Footer from "./components/Footer";
+import SpaServicesSection from "./components/SpaServicesSection"
 
 function App() {
   return (
     <>
       <Hero />
       <Sobre />
+      <SpaServicesSection />
       <Servicos />
       <Depoimento />
       <Localizacao />

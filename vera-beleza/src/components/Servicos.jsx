@@ -54,7 +54,7 @@ export default function Servicos() {
         <motion.img
           src="/image1.png"
           alt=""
-          initial={{ opacity: 0, y: -100 }}
+          initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
           transition={{ duration: 0.8 }}
@@ -64,7 +64,7 @@ export default function Servicos() {
         {/* Imagem com classe img - vindo de baixo */}
         <motion.div
           className="img"
-          initial={{ opacity: 0, y: 100 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 100 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -78,7 +78,7 @@ export default function Servicos() {
         <motion.img
           src="/image4.png"
           alt=""
-          initial={{ opacity: 0, y: -100 }}
+          initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -88,7 +88,7 @@ export default function Servicos() {
         {/* Imagem com classe img - vindo de baixo */}
         <motion.div
           className="img"
-          initial={{ opacity: 0, y: 100 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 100 }}
           transition={{ duration: 0.8, delay: 0.6 }}

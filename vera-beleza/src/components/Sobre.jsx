@@ -42,7 +42,7 @@ export default function Sobre() {
                 profundamente acolhedora. Seu compromisso vai além da estética:
                 ela cuida da autoestima e do bem-estar de cada cliente como se
                 fosse única. Ao longo dos anos, construiu uma clientela fiel,
-                com mais de 70 clientes fixas que a acompanham há muito tempo,
+                com mais de 50 clientes fixas que a acompanham há muito tempo,
                 reconhecendo nela não só uma excelente profissional, mas também
                 uma referência de confiança, empatia e dedicação. Cada sessão
                 com a Vera é mais do que um serviço — é um momento de cuidado,

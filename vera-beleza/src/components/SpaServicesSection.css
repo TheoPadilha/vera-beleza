@@ -1,0 +1,253 @@
+/* Seção de serviços */
+.spa-services-section {
+  padding: 80px 0px 0px 0px;
+
+  background-color: #ffe5db;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  color: #472b2b;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Container principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Cabeçalho da seção */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 50px;
+  font-weight: 700;
+  color: #4a2c2a;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+  color: #91674d;
+  font-weight: 500;
+}
+
+/* Grid de serviços */
+.services-grid {
+  
+  display: grid;
+ 
+  gap: 230px 90px;
+  position: relative;
+  z-index: 1;
+}
+
+.service-card {
+  position: relative;
+  overflow: visible; /* Permite que o conteúdo ultrapasse os limites */
+}
+
+.service-image-container {
+  position: relative;
+  
+}
+.service-card{
+  width: 100%;
+}
+.service-image {
+  width: 100%;
+  height: 340px;
+  display: block;
+}
+
+.service-content {
+  position: absolute;
+  bottom: -150px; /* Posiciona o texto para baixo, se necessário */
+  left: 214px; /* Alinhamento à esquerda, se necessário */
+  width: 60%;
+  height: 210px;
+  text-align: center;
+  background: #ffe5db; /* Fundo colorido */
+  color: #333; /* Cor do texto */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.service-title,
+.service-price,
+.service-description {
+  margin: 0;
+  margin-bottom: 8px; /* Adiciona um pequeno espaço entre as linhas de texto */
+}
+
+.service-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #4a2c2a;
+}
+
+.service-price {
+  color: #4a4a4a;
+  font-family: "Poppins", sans-serif;
+}
+
+.service-description {
+  padding: 0 24px;
+  color: #6b6b6b;
+  font-style: italic;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+.espacof {
+  background-image: linear-gradient(#ffe5db 30%, #ffefe7 100%);
+  padding: 100px 0px;
+}
+/* Botão de CTA */
+.services-cta {
+  margin-top: 60px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.agendehorario {
+  display: inline-flex;
+  padding: 12px 16px;
+  background-color: #4a2c2a;
+  color: #faf0d7;
+  font-family: "Poppins", sans-serif;
+  font-size: 23px;
+  border-radius: 18px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  align-items: center;
+}
+
+.agendehorario svg {
+  margin-right: 5px;
+}
+
+.agendehorario:hover {
+  background-color: #91674d;
+  transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 40px;
+  }
+
+  .section-subtitle {
+    font-size: 26px;
+  }
+
+  .spa-services-section {
+    padding: 60px 0;
+  }
+
+  .alicate2 {
+    width: 80px;
+    right: auto;
+    left: 20px;
+  }
+
+  .meditando {
+    width: 80px;
+    right: 20px;
+    bottom: auto;
+    top: 20px;
+  }
+
+  .esmalte,
+  .lotus {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 32px;
+  }
+
+  .section-subtitle {
+    font-size: 22px;
+  }
+
+  .service-title {
+    font-size: 18px;
+  }
+
+  .service-price {
+    font-size: 16px;
+  }
+
+  .service-description {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+
+  .agendehorario {
+    font-size: 18px;
+  }
+}
+/* Adições para animações - adicione ao final do seu arquivo CSS original */
+
+/* Estado inicial dos cards de serviço */
+.service-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Quando o card se torna visível */
+.service-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animação da imagem vindo de cima */
+.service-card .service-image {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition-delay: 0.2s;
+}
+
+.service-card.visible .service-image {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animação do texto vindo da esquerda */
+.service-card .service-content {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition-delay: 0.4s;
+}
+
+.service-card.visible .service-content {
+  opacity: 1;
+  transform: translateX(0);
+}
