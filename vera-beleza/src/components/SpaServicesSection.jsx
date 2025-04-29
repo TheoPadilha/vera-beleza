@@ -3,17 +3,25 @@ import "./SpaServicesSection.css"; // Importando o arquivo de estilos original
 
 const ServiceCard = ({ image, title, price, duration, description }) => {
   const cardRef = useRef(null);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
+          cardRef.current.classList.add("visible");
+          cardRef.current.classList.remove("exiting");
         } else {
-          entry.target.classList.remove("visible");
+          cardRef.current.classList.remove("visible");
+          cardRef.current.classList.add("exiting");
+
+          // Esperar a transição acabar antes de remover a classe "exiting"
+          setTimeout(() => {
+            if (cardRef.current) {
+              cardRef.current.classList.remove("exiting");
+            }
+          }, 600); // mesmo tempo do transition no CSS (0.6s = 600ms)
         }
       },
-      { threshold: 0.1 }
+      { threshold: [0, 0.02, 0.1, 0.5, 0.95, 0.98, 1] }
     );
 
     if (cardRef.current) {
@@ -104,9 +112,7 @@ export default function SpaServicesSection() {
           ))}
         </div>
       </div>
-      <div className="espacof">
-
-      </div>
+      <div className="espacof"></div>
     </section>
   );
 }

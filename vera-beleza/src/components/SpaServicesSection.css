@@ -1,7 +1,6 @@
 /* Seção de serviços */
 .spa-services-section {
   padding: 80px 0px 0px 0px;
-
   background-color: #ffe5db;
   font-family: "Poppins", sans-serif;
   position: relative;
@@ -41,52 +40,57 @@
   font-weight: 500;
 }
 
-/* Grid de serviços */
+/* Grid de serviços - Ajustado para melhor responsividade */
 .services-grid {
-  
   display: grid;
- 
-  gap: 230px 90px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 120px 40px;
   position: relative;
   z-index: 1;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
+/* Card de serviço - Design melhorado para responsividade */
 .service-card {
+  width: 100%;
   position: relative;
-  overflow: visible; /* Permite que o conteúdo ultrapasse os limites */
+  margin-bottom: 60px;
 }
 
 .service-image-container {
   position: relative;
-  
-}
-.service-card{
   width: 100%;
-}
-.service-image {
-  width: 100%;
-  height: 340px;
-  display: block;
+  overflow: hidden;
 }
 
+.service-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Conteúdo do serviço - Posicionamento melhorado */
 .service-content {
-  position: absolute;
-  bottom: -150px; /* Posiciona o texto para baixo, se necessário */
-  left: 214px; /* Alinhamento à esquerda, se necessário */
-  width: 60%;
-  height: 210px;
+  position: relative;
+  margin: -40px auto 0;
+  width: 85%;
   text-align: center;
-  background: #ffe5db; /* Fundo colorido */
-  color: #333; /* Cor do texto */
-  padding: 10px;
+  background: #ffe5db;
+  color: #333;
+  padding: 20px;
   box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .service-title,
 .service-price,
 .service-description {
   margin: 0;
-  margin-bottom: 8px; /* Adiciona um pequeno espaço entre as linhas de texto */
+  margin-bottom: 8px;
 }
 
 .service-title {
@@ -103,7 +107,7 @@
 }
 
 .service-description {
-  padding: 0 24px;
+  padding: 0 15px;
   color: #6b6b6b;
   font-style: italic;
   font-family: "Poppins", sans-serif;
@@ -112,14 +116,16 @@
 
 .espacof {
   background-image: linear-gradient(#ffe5db 30%, #ffefe7 100%);
-  padding: 100px 0px;
+  padding: 100px 0px 60px;
 }
+
 /* Botão de CTA */
 .services-cta {
   margin-top: 60px;
   text-align: center;
   position: relative;
   z-index: 2;
+  padding: 0 20px;
 }
 
 .agendehorario {
@@ -146,52 +152,68 @@
   transform: translateY(-2px);
 }
 
-/* Responsividade */
-@media (min-width: 768px) {
+/* Responsividade - Sistema mais robusto */
+@media (min-width: 1024px) {
   .services-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 120px 60px;
+  }
+
+  .service-content {
+    width: 80%;
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 100px 40px;
+  }
+
   .section-title {
-    font-size: 40px;
+    font-size: 42px;
   }
 
   .section-subtitle {
-    font-size: 26px;
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 80px 0;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .section-subtitle {
+    font-size: 24px;
   }
 
   .spa-services-section {
-    padding: 60px 0;
+    padding: 50px 0 0;
   }
 
-  .alicate2 {
-    width: 80px;
-    right: auto;
-    left: 20px;
+  .service-content {
+    width: 90%;
+    margin-top: -60px;
   }
 
-  .meditando {
-    width: 80px;
-    right: 20px;
-    bottom: auto;
-    top: 20px;
-  }
-
-  .esmalte,
-  .lotus {
-    display: none;
+  .service-image {
+    height: 250px;
   }
 }
 
 @media (max-width: 480px) {
   .section-title {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .section-subtitle {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .service-title {
@@ -204,34 +226,70 @@
 
   .service-description {
     font-size: 14px;
-    padding: 0 15px;
+    padding: 0 10px;
   }
 
   .agendehorario {
-    font-size: 18px;
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+
+  .service-content {
+    padding: 15px;
+    margin-top: -50px;
+  }
+
+  .service-image {
+    height: 200px;
+  }
+
+  .espacof {
+    padding: 60px 0 40px;
   }
 }
-/* Adições para animações - adicione ao final do seu arquivo CSS original */
 
-/* Estado inicial dos cards de serviço */
-.service-card {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+/* Para telas muito pequenas */
+@media (max-width: 360px) {
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section-subtitle {
+    font-size: 18px;
+  }
+
+  .service-title {
+    font-size: 16px;
+  }
+
+  .service-content {
+    width: 95%;
+    padding: 12px;
+  }
 }
 
-/* Quando o card se torna visível */
+/* Animações - Mantido mas adaptado para o novo layout */
+.service-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.2s ease, transform 0.6s ease;
+}
+
 .service-card.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Animação da imagem vindo de cima */
+.service-card.exiting {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
 .service-card .service-image {
   opacity: 0;
-  transform: translateY(-50px);
+  transform: translateY(-30px);
   transition: opacity 0.7s ease, transform 0.7s ease;
-  transition-delay: 0.2s;
+  transition-delay: 0.7s;
 }
 
 .service-card.visible .service-image {
@@ -239,15 +297,14 @@
   transform: translateY(0);
 }
 
-/* Animação do texto vindo da esquerda */
 .service-card .service-content {
   opacity: 0;
-  transform: translateX(-50px);
+  transform: translateY(30px);
   transition: opacity 0.7s ease, transform 0.7s ease;
-  transition-delay: 0.4s;
+  transition-delay: 1s;
 }
 
 .service-card.visible .service-content {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }

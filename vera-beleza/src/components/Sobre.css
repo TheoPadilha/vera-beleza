@@ -133,17 +133,48 @@
 }
 
 /* Responsividade */
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
-  .container-sobre {
+  .texto-img {
     flex-direction: column;
-    text-align: center;
+    gap: 30px;
+    padding: 20px 0;
+  }
+
+  .container-sobre {
+    padding: 60px 10px;
   }
 
   .texto-sobre {
-    margin: 0 0 30px 0;
+    text-align: center;
+  }
+
+  .sobre h2 {
+    font-size: 2rem;
+  }
+
+  .sobre p {
+    font-size: 1rem;
+    max-width: 90%;
   }
 
   .foto-vera {
-    max-width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  /* Ícones decorativos no mobile */
+  .bgmancha,
+  .bgmancha2 {
+    width: 150px;
+  }
+  
+  .alicate2,
+  .meditando,
+  .lotus,
+  .esmalte {
+    width: 70px;
+    opacity: 0.5; /* Deixa mais suave */
   }
 }
+
