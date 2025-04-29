@@ -12,6 +12,7 @@
   align-items: center;
   justify-content: space-between;
   max-width: 1900px;
+ 
 }
 
 .logo {
@@ -20,12 +21,8 @@
   color: #9b493b;
   font-weight: 600;
 }
-
-.bg-folha7 {
-  position: absolute;
-  scale: 0.6;
-  left: 138px;
-  top: -35px;
+.Menu-mob {
+  display: none;
 }
 
 .nav-links {
@@ -60,7 +57,86 @@
   pointer-events: none;
 }
 .navLink_colorido {
+  position: absolute;
   z-index: 999;
+  right: 5%;
+}
+/* Adicione estas regras ao seu arquivo Navbar.css existente */
+/* Você deve manter o resto do seu CSS existente e apenas adicionar ou atualizar estas regras */
+
+.btn-abrir-menu {
+  display: none; /* Esconde por padrão em desktop */
+  font-size: 36px;
+  color: #9b493b;
+  cursor: pointer;
+}
+
+/* Regras CSS para o menu mobile */
+.Menu-mob {
+  display: none;
+  width: 0%;
+  transition: width 0.4s ease-in-out;
+  background-color: #f4b395;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  overflow: hidden;
+}
+
+.Menu-mob.ativo {
+  display: inline-block;
+  width: 60%;
+}
+
+.overlay-menu {
+  background-color: rgba(74, 44, 42, 0.56);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+}
+
+.overlay-menu.ativo {
+  display: block;
+}
+
+.Menu-mob .btn-fechar {
+  font-size: 30px;
+  color: #4a2c2a;
+  position: fixed;
+  right: 20px;
+  top: 15px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.Menu-mob nav ul {
+  list-style: none;
+  text-align: right;
+  padding: 0;
+  margin-top: 70px;
+}
+
+.Menu-mob nav {
+  margin-top: 30px;
+}
+
+.Menu-mob nav ul li a {
+  display: block;
+  color: #4a2c2a;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 25px 10%;
+}
+
+.Menu-mob nav ul li a:hover {
+  color: #9b493b;
 }
 
 @media (max-width: 1500px), (max-height: 800px) {
@@ -68,15 +144,166 @@
     scale: 0.85;
   }
 }
-@media (max-width: 968px) {
-  .nav-links {
+
+/* Media query para exibir o botão de menu em telas pequenas */
+@media (max-width: 968px) ,(max-width: 1024px) and (max-height: 600px) {
+  .navbar-container .nav-links {
     display: none;
   }
+
+  .btn-abrir-menu {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 5;
+    font-size: 36px;
+    color: #9b493b;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    /* Aumenta a área clicável */
+    padding: 10px;
+    margin: -10px; /* Compensa o padding para manter o posicionamento visual */
+    line-height: 1;
+  }
+
+  /* Estilo para o ícone dentro do botão */
+  .btn-abrir-menu svg {
+    display: block; /* Garante que o SVG seja renderizado corretamente */
+    pointer-events: none; /* Evita que o SVG capture eventos de clique */
+  }
+
   .logo {
     position: absolute;
     scale: 0.8;
     left: 10px;
     top: 10px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  /* Menu Mobile com animações melhoradas */
+  .Menu-mob {
+    display: block; /* Sempre visível, mas com largura 0 */
+    width: 0;
+    height: 100vh;
+    background-color: #f4b395;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    transition: all 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
+    overflow: hidden;
+    opacity: 0;
+    box-shadow: -5px 0px 15px rgba(0, 0, 0, 0);
+  }
+
+  .Menu-mob.ativo {
+    width: 60%;
+    opacity: 1;
+    box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Overlay com transição suave */
+  .overlay-menu {
+    background-color: rgba(74, 44, 42, 0);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    pointer-events: none;
+  }
+
+  .overlay-menu.ativo {
+    background-color: rgba(74, 44, 42, 0.56);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  /* Animação para o botão de fechar */
+  .Menu-mob .btn-fechar {
+    font-size: 30px;
+    color: #4a2c2a;
+    position: fixed;
+    right: 20px;
+    top: 15px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.8);
+    transition: all 0.3s ease;
+    /* Importante: desativa interações quando o menu não está ativo */
+    pointer-events: none;
+  }
+
+  /* Reativa interações apenas quando o menu está ativo */
+  .Menu-mob.ativo .btn-fechar {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+    pointer-events: auto; /* Permite cliques apenas quando visível */
+  }
+
+  /* Animação para os links do menu */
+  .Menu-mob nav {
+    margin-top: 30px;
+  }
+
+  .Menu-mob nav ul {
+    list-style: none;
+    text-align: right;
+  }
+
+  .Menu-mob nav ul li {
+    transform: translateX(20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    transition-delay: 0.05s;
+  }
+
+  .Menu-mob.ativo nav ul li {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  /* Delays escalonados para os itens do menu */
+  .Menu-mob.ativo nav ul li:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+
+  .Menu-mob.ativo nav ul li:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+
+  .Menu-mob.ativo nav ul li:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+
+  .Menu-mob.ativo nav ul li:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+
+  .Menu-mob nav ul li a {
+    display: block;
+    color: #4a2c2a;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 35px 10%;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .Menu-mob nav ul li a:hover {
+    color: #9b493b;
+    transform: translateX(-5px);
   }
 }
 

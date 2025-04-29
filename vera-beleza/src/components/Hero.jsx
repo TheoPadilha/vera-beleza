@@ -15,7 +15,8 @@ import { LuCalendarHeart } from "react-icons/lu";
 
 import { useEffect, useState } from "react";
 import PhysicsCanvas from "./PhysicsCanvas"; // Importa o componente que criamos
-
+import MenuNav from "./Menu-nav.jsx";
+import { IoReorderThree } from "react-icons/io5";
 const Home = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
@@ -36,47 +37,62 @@ const Home = () => {
     transition: "transform 0.1s ease-out",
   };
 
+  const [menuAberto, setMenuAberto] = useState(false);
+
   return (
     <div className="hero-container" style={{ position: "relative" }}>
       {/* Renderiza o canvas de animação com p5.js */}
       <PhysicsCanvas />
       {/* NAVBAR */}
-      <div className="nav_rei">
-        <header className="navbar">
-          {/* <div className="bg-folha7">
-            <img src={bgFolha7} alt="" style={folhaStyle} />
-          </div> */}
-          <div className="navbar-container">
-            <div className="logo">Vera Alice</div>
-            <div className="navLink_colorido">
-              <ul className="nav-links">
-                <li>
-                  <a href="#sobre">Sobre</a>
-                </li>
-
-                <li>
-                  <a href="#servicos">Serviços</a>
-                </li>
-                <li>
-                  <a href="#Depoimentos">Depoimentos</a>
-                </li>
-                <li>
-                  <a href="#local">Local</a>
-                </li>
-                <div className="blob-header">
-                  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      fill="#F4B395"
-                      d="M45.8,-38.1C58.2,-33.4,66.2,-16.7,61.8,-4.4C57.5,8,40.7,16,28.3,27C16,38,8,52.1,-3.4,55.5C-14.8,58.9,-29.6,51.6,-42.7,40.6C-55.9,29.6,-67.4,14.8,-64.5,2.9C-61.6,-9,-44.3,-17.9,-31.1,-22.6C-17.9,-27.2,-9,-27.5,3.9,-31.4C16.7,-35.3,33.4,-42.7,45.8,-38.1Z"
-                      transform="translate(100 100)"
-                    />
-                  </svg>
+      <header>
+        <div className="nav_rei">
+          <header className="navbar">
+            <div className="navbar-container">
+              <div className="logo">Vera Alice</div>
+              <div className="navLink_colorido">
+                <ul className="nav-links">
+                  <li>
+                    <a href="#sobre">Sobre</a>
+                  </li>
+                  <li>
+                    <a href="#servicos">Serviços</a>
+                  </li>
+                  <li>
+                    <a href="#Depoimentos">Depoimentos</a>
+                  </li>
+                  <li>
+                    <a href="#local">Local</a>
+                  </li>
+                  <div className="blob-header">
+                    <svg
+                      viewBox="0 0 200 200"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill="#F4B395"
+                        d="M45.8,-38.1C58.2,-33.4,66.2,-16.7,61.8,-4.4C57.5,8,40.7,16,28.3,27C16,38,8,52.1,-3.4,55.5C-14.8,58.9,-29.6,51.6,-42.7,40.6C-55.9,29.6,-67.4,14.8,-64.5,2.9C-61.6,-9,-44.3,-17.9,-31.1,-22.6C-17.9,-27.2,-9,-27.5,3.9,-31.4C16.7,-35.3,33.4,-42.7,45.8,-38.1Z"
+                        transform="translate(100 100)"
+                      />
+                    </svg>
+                  </div>
+                </ul>
+              </div>
+              <div>
+                <div
+                  className="btn-abrir-menu"
+                  onClick={() => setMenuAberto(true)}
+                >
+                  <IoReorderThree />
                 </div>
-              </ul>
+                <MenuNav
+                  aberto={menuAberto}
+                  fecharMenu={() => setMenuAberto(false)}
+                />
+              </div>
             </div>
-          </div>
-        </header>
-      </div>
+          </header>
+        </div>
+      </header>
 
       {/* CONTEÚDO PRINCIPAL */}
       <main className="hero-main">

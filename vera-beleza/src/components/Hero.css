@@ -79,7 +79,7 @@ html {
   padding-left: 50px;
   max-width: 800px;
   position: absolute;
-  top: 70px;
+  top: 20px;
   z-index: 5;
 }
 
@@ -185,8 +185,8 @@ a.agendehorario {
 
 .img-quadro {
   position: absolute;
-  margin-bottom: 500px;
-  margin-left: -350px;
+  margin-bottom: 370px;
+  margin-left: 900px;
   z-index: 0;
 }
 
