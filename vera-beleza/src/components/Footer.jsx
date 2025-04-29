@@ -13,7 +13,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-logo">
-          <h3>Vera Beleza & Bem-Estar</h3>
+          <h3>Vera Alice <br /> Mãos & Terapias </h3>
           <p>Cuidando da sua beleza com carinho e dedicação</p>
         </div>
 
@@ -84,7 +84,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <p>
-          &copy; 2025 Vera Beleza & Bem-Estar. Todos os direitos reservados.
+          &copy; 2025 Vera Alice Mãos & Terapias . Todos os direitos reservados.
         </p>
       </div>
     </footer>

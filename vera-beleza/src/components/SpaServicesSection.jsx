@@ -42,9 +42,7 @@ const ServiceCard = ({ image, title, price, duration, description }) => {
       </div>
       <div className="service-content text-animate">
         <h3 className="service-title">{title}</h3>
-        <p className="service-price">
-          ${price} - Voucher de {duration} minutos
-        </p>
+        <p className="service-price"> Duração de {duration} minutos</p>
         <p className="service-description">{description}</p>
       </div>
     </div>
@@ -56,38 +54,34 @@ export default function SpaServicesSection() {
     {
       id: 1,
       image: "/image10.png",
-      title: "Tratamento de Spa Facial",
-      price: "65.00",
+      title: "Cuidado com as Mãos",
       duration: "60",
       description:
-        "Irradie confiança com este tratamento facial profundamente benéfico massagem.",
+        "Hidratação e renovação para suas mãos com técnicas suaves e produtos revitalizantes.",
     },
     {
       id: 2,
       image: "/image9.png",
-      title: "Massagem nas Costas",
-      price: "125.00",
-      duration: "60",
+      title: "Massagem Relaxante",
+      duration: "75",
       description:
-        "Esta massagem calmante é uma mistura de golpes, alongamento movimentos e acupressão.",
+        "Desfrute de uma massagem calmante que alivia tensões e proporciona bem-estar completo.",
     },
     {
       id: 3,
       image: "/image8.png",
-      title: "Massagem com Pedras Quentes",
-      price: "150.00",
-      duration: "90",
+      title: "Depilação com Cera",
+      duration: "60",
       description:
-        "Relaxe profundamente com o calor terapêutico das pedras vulcânicas sobre os músculos tensos.",
+        "Remoção eficaz dos pelos com cera quente, garantindo suavidade e conforto para a pele.",
     },
     {
       id: 4,
       image: "/image11.png",
       title: "Reflexologia Manual e Podal",
-      price: "85.00",
-      duration: "45",
+      duration: "60",
       description:
-        "Terapia de pressão específica nos pontos reflexos das mãos e pés para equilibrar o corpo.",
+        "Estimule pontos reflexos das mãos e pés para restaurar o equilíbrio do corpo e da mente.",
     },
   ];
 
