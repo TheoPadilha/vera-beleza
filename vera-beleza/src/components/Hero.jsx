@@ -1,4 +1,4 @@
-import "./hero.css";
+import "./Hero.css";
 import "./Navbar.css";
 import manicureImg from "../assets/home/upscalemedia-transformed (2) (1).png";
 import manicurepng from "../assets/home/manicure.png";
