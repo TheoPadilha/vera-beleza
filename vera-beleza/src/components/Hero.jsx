@@ -39,7 +39,7 @@ const Home = () => {
   const [menuAberto, setMenuAberto] = useState(false);
 
   return (
-    <div className="hero-container" style={{ position: "relative" }}>
+    <div className="hero-container" id="home" style={{ position: "relative" }}>
       {/* Renderiza o canvas de animação com p5.js */}
       <PhysicsCanvas />
       {/* NAVBAR */}
