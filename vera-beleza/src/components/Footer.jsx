@@ -65,7 +65,7 @@ const Footer = () => {
 
       <div className="footer-social">
         <a
-          href="https://instagram.com/verabeleza"
+          href="https://www.instagram.com/veraalicecristofoli"
           target="_blank"
           rel="noopener noreferrer"
           className="social-icon"

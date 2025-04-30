@@ -32,7 +32,7 @@ export default function Servicos() {
   return (
     <section className="servicos" id="servicos">
       <div className="container">
-        <h2>Nossos Serviços</h2>
+        <h2>Todos os Serviços</h2>
         <div className="cards">
           {servicos.map((servico, index) => (
             <motion.div
