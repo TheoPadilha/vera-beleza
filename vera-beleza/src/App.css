@@ -4,6 +4,7 @@
   box-sizing: border-box;
   z-index: 0;
   overflow: hidden;
+  -webkit-tap-highlight-color: transparent; /* Remove o destaque azul no toque */
 }
 
 html {

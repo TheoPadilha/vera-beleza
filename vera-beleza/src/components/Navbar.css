@@ -12,7 +12,6 @@
   align-items: center;
   justify-content: space-between;
   max-width: 1900px;
- 
 }
 
 .logo {
@@ -64,7 +63,7 @@
 /* Adicione estas regras ao seu arquivo Navbar.css existente */
 /* Você deve manter o resto do seu CSS existente e apenas adicionar ou atualizar estas regras */
 
-.btn-abrir-menu {
+.btn-abrir-menu{
   display: none; /* Esconde por padrão em desktop */
   font-size: 36px;
   color: #9b493b;
@@ -146,7 +145,7 @@
 }
 
 /* Media query para exibir o botão de menu em telas pequenas */
-@media (max-width: 968px) ,(max-height: 600px) {
+@media (max-width: 968px), (max-height: 600px) {
   .navbar-container .nav-links {
     display: none;
   }
@@ -165,8 +164,11 @@
     padding: 10px;
     margin: -10px; /* Compensa o padding para manter o posicionamento visual */
     line-height: 1;
+    -webkit-tap-highlight-color: transparent;
   }
+  
 
+  
   /* Estilo para o ícone dentro do botão */
   .btn-abrir-menu svg {
     display: block; /* Garante que o SVG seja renderizado corretamente */
@@ -243,6 +245,7 @@
     transition: all 0.3s ease;
     /* Importante: desativa interações quando o menu não está ativo */
     pointer-events: none;
+    -webkit-tap-highlight-color: transparent;
   }
 
   /* Reativa interações apenas quando o menu está ativo */
