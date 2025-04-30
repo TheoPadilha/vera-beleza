@@ -8,8 +8,7 @@ import depilacaopng from "../assets/home/legs.png";
 import massagempng from "../assets/home/facial-treatment.png";
 import muitomaispng from "../assets/home/love.png";
 import { Blob, Blob2, Blob3 } from "./Blob.jsx";
-import { BsInstagram } from "react-icons/bs";
-import { SiWhatsapp } from "react-icons/si";
+
 import quadropng from "../assets/home/quadro.png";
 import { LuCalendarHeart } from "react-icons/lu";
 
