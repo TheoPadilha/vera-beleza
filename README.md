@@ -4,6 +4,8 @@
 
 Este projeto é uma **Landing Page** desenvolvida para **Vera Alice**, profissional dedicada ao **bem-estar feminino**. Ela oferece serviços como massagens terapêuticas, manicure, e outras práticas voltadas ao cuidado do corpo e da mente. A página foi criada para apresentar seus serviços com elegância, leveza e acolhimento.
 
+Acesse: https://vera-beleza.vercel.app/
+
 ## 🛠️ Tecnologias Utilizadas
 
 - **React.js**
