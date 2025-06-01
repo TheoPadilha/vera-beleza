@@ -33,7 +33,7 @@ html {
   background-size: cover;
   background-position: center;
   font-family: sans-serif;
-  max-height: 100svh;
+  max-height: 100vh;
   position: relative;
   overflow: hidden;
   z-index: 0;
