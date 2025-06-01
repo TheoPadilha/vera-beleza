@@ -42,7 +42,7 @@ html {
 .hero-main {
   position: relative;
   display: flex;
-  height: 100vh;
+  height: 100svh;
   width: 100%;
   justify-content: space-between;
   align-items: center;
